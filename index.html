@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>정지훈 앱 안내 페이지</title>
+<style>
+  :root { --bg:#f4f6fb; --card:#fff; --text:#16233d; --muted:#5b7196; --accent:#0f5fd8; --border:#dbe4f3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0e1420; --card:#161f31; --text:#e8eef9; --muted:#93a8c6; --accent:#6fb1ff; --border:#26324a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif; line-height:1.7; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; }
+  .app { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:22px 26px; margin-bottom:16px; }
+  .app h2 { margin:0 0 10px; font-size:18px; }
+  .app a { display:inline-block; margin-right:16px; color:var(--accent); text-decoration:none; font-weight:600; }
+  .app a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>앱 안내 페이지</h1>
+  <div class="app">
+    <h2>업넘버 (UP NUMBER)</h2>
+    <a href="privacy/upnumber/">개인정보처리방침</a>
+    <a href="data-deletion/upnumber/">계정 삭제 요청</a>
+  </div>
+</div>
+</body>
+</html>
