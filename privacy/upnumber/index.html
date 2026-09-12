@@ -1,105 +1,173 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>업넘버(UP NUMBER) 개인정보처리방침</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>업넘버 개인정보 처리방침</title>
 <style>
-  :root {
-    --bg: #f4f6fb;
-    --card: #ffffff;
-    --text: #16233d;
-    --muted: #5b7196;
-    --accent: #0f5fd8;
-    --border: #dbe4f3;
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; padding: 28px 20px 64px;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    max-width: 720px; margin-inline: auto;
+    color: #16233d; background: #f7f9fc;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0e1420;
-      --card: #161f31;
-      --text: #e8eef9;
-      --muted: #93a8c6;
-      --accent: #6fb1ff;
-      --border: #26324a;
-    }
+    body { color: #e8eef8; background: #10151f; }
+    h1, h2 { color: #fff; }
+    .box { background: #18202e; border-color: #2a3446; }
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-    line-height: 1.7;
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: #6b7c99; font-size: 14px; margin: 0 0 28px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  .box {
+    background: #fff; border: 1px solid #e2e8f2; border-radius: 12px;
+    padding: 14px 18px; margin: 14px 0;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  .sub { color: var(--muted); font-size: 15px; margin-bottom: 36px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px 30px;
-    margin-bottom: 20px;
-  }
-  h2 { font-size: 18px; margin-top: 0; }
-  h2 .no { color: var(--accent); margin-right: 8px; }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 10px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  th { color: var(--muted); font-weight: 600; width: 30%; }
-  ul { margin: 8px 0; padding-left: 20px; }
-  a { color: var(--accent); }
-  .footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 40px; }
+  code { font-size: 14px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>업넘버(UP NUMBER) 개인정보처리방침</h1>
-  <div class="sub">시행일: 2026년 8월 27일 · 개발자: 정지훈 (1인 개발)</div>
 
-  <div class="card">
-    <h2><span class="no">1</span>수집하는 정보</h2>
-    <table>
-      <tr><th>닉네임</th><td>사용자가 직접 정하는 표시 이름입니다. 실명·이메일·전화번호를 요구하지 않습니다.</td></tr>
-      <tr><th>게임 식별자</th><td>앱을 처음 실행할 때 기기 안에서 자동으로 만들어지는 임의의 문자열(토큰)입니다. 재접속 시 같은 사람인지 구분하는 데만 쓰이며, 이름·전화번호 등 실제 개인을 특정하는 값이 아닙니다.</td></tr>
-      <tr><th>게임 전적</th><td>멀티플레이를 한 경우 플레이 횟수·승수·최고 점수가 서버에 남습니다(랭킹 화면에 쓰입니다).</td></tr>
-      <tr><th>로비 채팅</th><td>멀티플레이 방 안에서 주고받은 채팅 메시지입니다.</td></tr>
-    </table>
-  </div>
+<h1>업넘버 개인정보 처리방침</h1>
+<p class="sub">최종 수정일: 2026년 9월 13일</p>
 
-  <div class="card">
-    <h2><span class="no">2</span>정보를 어디에, 어떻게 저장하나요</h2>
-    <ul>
-      <li><b>기기 안(로컬 저장소)</b> — 닉네임, 스킨/설정, 코인 등은 이 기기에만 저장됩니다. 외부로 전송되지 않습니다.</li>
-      <li><b>서버(멀티플레이를 할 때만)</b> — 닉네임·게임 식별자·전적은 개발자가 운영하는 서버(Render.com 호스팅)의 파일에 저장됩니다. 통신은 암호화(WSS)됩니다.</li>
-      <li><b>로비 채팅</b> — 서버 메모리에 방마다 최근 40개까지만 잠깐 보관되며, 디스크에 저장되지 않고 서버가 다시 시작되면 사라집니다.</li>
-    </ul>
-  </div>
+<p>
+  업넘버(UP NUMBER, 이하 "앱")는 이용자의 개인정보를 소중히 다룹니다.
+  이 문서는 앱이 어떤 정보를 다루고, 어디에 쓰며, 얼마나 보관하는지를 설명합니다.
+</p>
 
-  <div class="card">
-    <h2><span class="no">3</span>지금 하지 않는 것</h2>
-    <ul>
-      <li>광고 SDK, 분석(애널리틱스) SDK를 사용하지 않습니다.</li>
-      <li>앱 안에서 실제 돈이 오가는 결제(인앱 결제)가 없습니다. 상점의 항목은 모두 무료로 획득하는 꾸미기 요소입니다.</li>
-      <li>위치정보, 연락처, 카메라, 마이크, 저장소 등 기기 권한을 요청하지 않습니다(인터넷 연결 권한만 사용).</li>
-      <li>수집한 정보를 제3자에게 판매하거나 제공하지 않습니다.</li>
-      <li>만 14세 미만 아동을 특정하여 대상으로 하지 않으며, 실명·생년월일 등을 요구하지 않습니다.</li>
-    </ul>
-    <p style="color:var(--muted); font-size:14px;">※ 위 항목이 앞으로 바뀌면(광고 도입 등) 이 방침을 갱신하고 시행일을 다시 표시합니다.</p>
-  </div>
-
-  <div class="card">
-    <h2><span class="no">4</span>보관 기간과 삭제</h2>
-    <p>게임 전적은 별도로 삭제를 요청하기 전까지 보관됩니다. 계정(닉네임·전적)을 지우고 싶다면 아래 계정 삭제 요청 페이지에서 방법을 확인해 주세요.</p>
-    <p><a href="../../data-deletion/upnumber/">→ 계정·데이터 삭제 요청 방법 보기</a></p>
-  </div>
-
-  <div class="card">
-    <h2><span class="no">5</span>문의</h2>
-    <p>개인정보와 관련해 궁금한 점이나 요청 사항은 아래 이메일로 연락해 주세요.</p>
-    <p><a href="mailto:jihun5968@naver.com">jihun5968@naver.com</a></p>
-  </div>
-
-  <div class="footer">업넘버(UP NUMBER) · 이 페이지는 게임 안내를 위해 제공됩니다.</div>
+<h2>1. 수집하지 않는 정보</h2>
+<div class="box">
+  앱은 아래 정보를 <strong>수집하지 않습니다.</strong>
+  <ul>
+    <li>이름, 생년월일, 성별, 주소, 전화번호</li>
+    <li>이메일 주소, 애플 ID(이메일), 구글 계정(이메일) 등 계정 식별자 — 아래 게임 플레이어 ID 는 이와 다른, 게임 전용 번호입니다</li>
+    <li>연락처, 사진, 위치, 카메라, 마이크</li>
+    <li>카드번호, 계좌번호 등 결제 수단 정보 — 결제는 애플·구글이 처리하며 앱은 그 값을 보지 못합니다</li>
+  </ul>
+  앱에는 회원가입 절차가 없고, 로그인이나 비밀번호가 없습니다.
 </div>
+
+<h2>2. 수집하는 정보</h2>
+<p>온라인 대전과 순위표 기능을 쓸 때에 한해 아래 정보가 서버로 전송됩니다.</p>
+<ul>
+  <li><strong>이용자가 직접 입력한 별명</strong> — 대전 상대에게 보이는 이름입니다. 실명일 필요가 없으며 언제든 바꿀 수 있습니다.</li>
+  <li><strong>임의 발급 식별 토큰</strong> — 같은 이용자를 알아보기 위한 무작위 문자열입니다. 기기나 개인을 특정하는 정보가 아닙니다.</li>
+  <li><strong>게임 플레이어 ID</strong> — 아이폰의 Game Center, 안드로이드의 Google Play 게임즈가 이 앱에만 발급하는 번호입니다.
+    기기를 바꿔도 같은 이용자의 대전 기록을 이어 주기 위해 서버에 저장합니다. 이메일·실명·연락처가 아니며, 이 번호로 이용자의 애플·구글 계정에 접근할 수 없습니다.
+    폰에 Game Center / Play 게임즈 로그인이 없으면 수집하지 않고, 앱은 위 임의 토큰만으로 동작합니다.</li>
+  <li><strong>대전 기록</strong> — 판수, 점수 등 순위표에 필요한 값입니다.</li>
+  <li><strong>게임 재화와 보유 목록</strong> — 코인·다이아 잔액, 구매한 스킨·아이콘, 선택한 아이콘입니다.
+      기기를 바꾸거나 앱을 다시 설치해도 구매한 항목이 사라지지 않도록 서버에 보관합니다.</li>
+</ul>
+<p>
+  혼자 하기(싱글 플레이)만 이용하더라도, 게임에서 얻은 코인을 계정에 보관하기 위해
+  <strong>획득한 코인 수</strong>가 서버로 전송됩니다. 게임 내용이나 조작 기록은 전송되지 않습니다.
+</p>
+
+<h2>3. 기기 안에만 저장되는 정보</h2>
+<p>
+  최근 대전 기록(다시보기용), 화면·소리·진동 설정, 언어 선택은 <strong>기기 안에만</strong> 저장되며
+  외부로 전송되지 않습니다. 앱을 삭제하면 함께 지워집니다.
+</p>
+
+<h2>4. 이용 목적</h2>
+<ul>
+  <li>온라인 대전 상대 연결 및 방 구성</li>
+  <li>순위표 표시</li>
+  <li>서버 장애 확인 및 이용 통계 파악</li>
+</ul>
+  <li>광고 노출 및 광고 성과 측정</li>
+  <li>구매한 항목(광고 제거)의 확인과 복원</li>
+</ul>
+<p>수집한 정보는 위 목적 외에 사용하지 않습니다.</p>
+
+<h2>4-1. 광고</h2>
+<p>
+  앱은 구글의 <strong>AdMob</strong> 광고를 사용합니다. <strong>게임을 하는 중에는 광고가 나오지 않습니다.</strong>
+</p>
+<ul>
+  <li><strong>띠 광고</strong> — 순위표 화면과 대전 대기실 아래쪽에 나옵니다.</li>
+  <li><strong>전면 광고</strong> — <strong>혼자 하기와 일일 도전</strong>이 끝난 뒤에만, 그것도 몇 판에 한 번 나옵니다.
+      여러 사람이 함께하는 대전에서는 <strong>나오지 않습니다</strong> — 한 사람의 광고가 다른 참가자를 기다리게 하기 때문입니다.</li>
+  <li><strong>보상형 광고</strong> — 이용자가 <strong>직접 눌렀을 때만</strong> 재생되며, 끝까지 보면 그 판에서 얻은 코인을
+      한 번 더 받습니다. 누르지 않으면 재생되지 않습니다.</li>
+</ul>
+<ul>
+  <li>광고를 내보내기 위해 <strong>기기 광고 식별자</strong>(iOS의 IDFA, 안드로이드의 광고 ID)와
+      대략적인 기기 정보(기종·운영체제·언어·국가)가 구글로 전송됩니다.</li>
+  <li>아이폰에서는 앱이 처음 켜질 때 <strong>추적을 허용할지 물어봅니다.</strong>
+      허용하지 않으면 맞춤 광고 대신 일반 광고가 나오며, 게임은 그대로 이용할 수 있습니다.</li>
+  <li>구글의 처리 방침은 <a href="https://policies.google.com/technologies/partner-sites">구글 파트너 사이트 정책</a>을 따릅니다.</li>
+  <li>상점에서 <strong>광고 제거</strong>를 구매하면 광고가 나오지 않으며, 광고 식별자도 전송되지 않습니다.</li>
+</ul>
+
+<h2>4-2. 결제</h2>
+<p>
+  앱은 다이아 묶음과 광고 제거를 판매합니다. 다이아는 게임 안에서 스킨·아이콘·별명 변경권을 사는 데 쓰입니다. 결제 자체는 <strong>애플 App Store 또는 구글 Play</strong>가 처리하며,
+  앱은 카드번호나 계좌번호를 받지도 저장하지도 않습니다.
+</p>
+<ul>
+  <li>구매 내역의 확인과 복원을 위해 <strong>RevenueCat</strong>(미국)의 서비스를 사용합니다.
+      스토어가 발급한 영수증과 무작위 이용자 식별자가 이 회사로 전송됩니다.</li>
+  <li>전송되는 값에는 이름·이메일·전화번호가 포함되지 않습니다.</li>
+  <li>이 절차는 폰을 바꾼 이용자가 이미 산 항목을 다시 사지 않도록 하는 데 쓰입니다.</li>
+  <li>결제가 확인되면 RevenueCat 이 앱 운영자의 서버로 <strong>구매 사실과 이용자 식별자</strong>를 알려 주고,
+      서버가 그때 다이아를 지급합니다. 이 과정에도 이름·이메일·카드 정보는 오가지 않습니다.</li>
+</ul>
+
+<h2>5. 제3자 제공</h2>
+<p>
+  앱은 수집한 정보를 <strong>어떤 제3자에게도 판매하지 않습니다.</strong>
+  다만 아래 두 곳에는 서비스 제공에 필요한 최소한의 정보가 전달됩니다.
+</p>
+<ul>
+  <li><strong>Google AdMob</strong> — 광고 노출과 성과 측정 (광고 식별자, 기기 정보)</li>
+  <li><strong>RevenueCat</strong> — 구매 확인과 복원 (스토어 영수증, 무작위 식별자)</li>
+</ul>
+<p>
+  분석 도구(Google Analytics 등)는 사용하지 않습니다.
+</p>
+
+<h2>6. 보관 기간</h2>
+<p>
+  별명과 대전 기록은 순위표 운영에 필요한 동안 보관하며, 이용자가 삭제를 요청하면 지체 없이 삭제합니다.
+  앱을 삭제하면 기기의 토큰이 사라져 이후 서버에서 해당 이용자를 식별할 수 없습니다.
+</p>
+
+<h2>7. 아동의 개인정보</h2>
+<p>
+  앱은 만 14세 미만 아동으로부터 개인정보를 의도적으로 수집하지 않습니다.
+  앱이 다루는 항목은 별명, 무작위 토큰, 광고 식별자뿐이며 아동을 식별할 수 있는 정보는 다루지 않습니다.
+  광고는 연령에 맞는 등급으로만 노출되도록 설정합니다.
+</p>
+
+<h2>8. 이용자의 권리</h2>
+<p>
+  이용자는 언제든지 별명 변경, 대전 기록 삭제, 앱 삭제를 통해 정보를 지울 수 있습니다.
+  서버에 남은 기록의 삭제를 원하시면 아래 연락처로 별명을 알려주시기 바랍니다.
+</p>
+
+<h2>9. 보안</h2>
+<p>
+  서버와의 통신은 암호화된 연결(HTTPS/WSS)을 사용합니다.
+  다만 앱은 비밀번호를 두지 않는 가벼운 구조이므로, 별명에 개인을 특정할 수 있는 정보를 넣지 않기를 권장합니다.
+</p>
+
+<h2>10. 방침 변경</h2>
+<p>
+  이 방침이 바뀌면 이 페이지에 수정일과 함께 게시합니다.
+  중요한 변경이 있을 경우 앱 안에서도 알립니다.
+</p>
+
+<h2>11. 문의</h2>
+<div class="box">
+  개발자: 정지훈<br>
+  이메일: <a href="mailto:jihun5968@naver.com">jihun5968@naver.com</a>
+</div>
+
 </body>
 </html>
